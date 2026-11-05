@@ -1,0 +1,28 @@
+name: Validate extension
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate manifest and packaged files
+        run: python scripts/validate.py
+      - name: Check JavaScript syntax
+        run: |
+          node --check content.js
+          node --check popup.js
+      - name: Build store archive
+        run: python scripts/build.py
+      - name: Verify archive contents
+        run: python scripts/validate.py --zip

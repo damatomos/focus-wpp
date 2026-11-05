@@ -1,0 +1,42 @@
+{
+  "manifest_version": 3,
+  "name": "Foco WA — Espaço para conversas",
+  "short_name": "Foco WA",
+  "description": "Escolha entre lista normal, somente fotos dos contatos ou lista totalmente oculta no WhatsApp Web.",
+  "version": "1.3.0",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_title": "Foco WA — Mudar visualização",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png"
+    }
+  },
+  "permissions": [
+    "storage",
+    "scripting",
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://web.whatsapp.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "content.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "host_permissions": [
+    "https://web.whatsapp.com/*"
+  ]
+}

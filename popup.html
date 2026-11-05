@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Foco WA</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main>
+    <header class="head">
+      <div class="logo" aria-hidden="true">◧</div>
+      <div><h1>Foco WA</h1><p>Mais espaço para conversar.</p></div>
+    </header>
+    <p class="eyebrow">VISUALIZAÇÃO DA LISTA</p>
+    <div class="options" role="group" aria-label="Modo da lista de conversas">
+      <button type="button" class="option" data-mode="normal" aria-pressed="false">
+        <span class="glyph" aria-hidden="true">▤</span>
+        <span class="words"><strong>Normal</strong><small>Contatos, nomes e prévias</small></span><span class="indicator" aria-hidden="true"></span>
+      </button>
+      <button type="button" class="option" data-mode="compacto" aria-pressed="false">
+        <span class="glyph" aria-hidden="true">◉</span>
+        <span class="words"><strong>Somente fotos</strong><small>Uma faixa com avatares clicáveis</small></span><span class="indicator" aria-hidden="true"></span>
+      </button>
+      <button type="button" class="option" data-mode="oculto" aria-pressed="false">
+        <span class="glyph" aria-hidden="true">▯</span>
+        <span class="words"><strong>Oculto</strong><small>A conversa ocupa o espaço livre</small></span><span class="indicator" aria-hidden="true"></span>
+      </button>
+    </div>
+    <p id="status" role="status">Pronto para usar no WhatsApp Web.</p>
+    <footer><span>Atalho: <kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>M</kbd></span><span>v1.3</span></footer>
+  </main>
+  <script src="popup.js"></script>
+</body>
+</html>

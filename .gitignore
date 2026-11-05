@@ -1,0 +1,30 @@
+# Pacotes gerados (não versionar builds da loja)
+dist/
+*.crx
+*.pem
+*.zip
+
+# Dependências e artefatos de desenvolvimento
+node_modules/
+coverage/
+playwright-report/
+test-results/
+.pytest_cache/
+__pycache__/
+*.py[cod]
+
+# Arquivos locais / segredos
+.env
+.env.*
+!.env.example
+*.log
+npm-debug.log*
+
+# Editores e sistema operacional
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+Desktop.ini
